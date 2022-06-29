@@ -1,0 +1,40 @@
+@import './_colors.scss';
+.block_add_com{
+    textarea{
+        width: 100%;
+        padding: 10px;
+        border: solid $Col_ddd;
+    }
+    textarea:focus{
+        outline: none;
+    }
+}
+
+.block_users_comments{
+    .user_block{
+        display: flex;
+        // border: solid;
+        margin-bottom: 10px;
+        .avatar-user{
+            font-size: 1.8em;
+            padding: 5px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius:50%;
+            color: $Col_000;
+            background-color: $Col_ddd;
+            opacity: .8;
+            margin-right: 10px;
+        }
+        .user_info_b{
+            padding-top: 0.5em;
+            span{
+                font-family: monospace;
+            }
+            
+        }
+    }
+}

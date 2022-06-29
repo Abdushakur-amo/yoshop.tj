@@ -1,0 +1,156 @@
+@import './_colors.scss';
+
+.itme_tovar{
+    *{
+        transition: all 500ms;
+    }
+            border: solid 1px $Col_ddd;
+            width: 100%;
+            .view_img{
+                transition: cubic-bezier(0.075, 0.82, 0.165, 1) .90s all;
+                a{       
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img{
+                        width: 100%;
+                        max-width: 220px;
+                    }
+                }
+            }
+            p{ margin-bottom:5px; }
+            p.summa{ font-weight:bold }
+            .btn-kupit{ display: none;}
+            h2{           
+                font-size: 1.1em;
+                font-weight: bold;
+                a{
+                    transition: all 400ms;
+                    color: $Col_000;
+                }
+                a:hover{
+                    color: $Col_design;
+                }
+            }
+            .comp-logos {
+                background: #f9fafb;
+                display: flex;
+                justify-content: space-between;
+                padding: 3px 15px;
+                img{ width: 23px;}
+            }
+            .information_itme{
+                padding: 5px 10px;
+
+            }
+            .v-carzin{
+                ul{
+                    width: 100%;
+                    display: flex;
+                    row-gap: 0;
+                    column-gap: 0;
+                    li{
+                        background-color: $Col_fff;
+                        height: 35px;
+                        width: 15%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: solid 1px $Col_ddd;
+                        cursor: pointer;
+                        .btn-warning {width: 100%;}
+                        
+                    }
+                    li:hover{ opacity: .5; color: $Col_000; font-weight: bold; 
+                        a{
+                            color: $Col_000;
+                        }
+                    }
+                    li.input-s{
+                        border: solid 1px $Col_ddd;
+                        input{
+                            width: 100%;
+                            height: 100%;
+                            text-align: center;
+                            font-weight: bold;
+                            border: none;
+                        }
+                        input:focus{ outline: none; }
+                    }
+                    li.button-s{
+                        border: none;
+                    }
+                    button{ border-radius:0; border-color: $Col_ddd;}
+                    li.button-s, button, a{
+                        width: 100%;
+                    }
+                }
+            }
+
+}
+#itme_riad_block{
+    margin: 10px 0;
+    *{
+        margin: unset;
+        padding: unset;
+        font-size: unset;
+        text-align: unset;
+        width: unset;
+        font-weight: unset;
+        transition: all .500ms;
+    }
+    .btn-kupit{ display: block; margin-top: 15px;}
+    .__block__{
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 10px 0;
+        column-gap: 1em;
+    }
+    .information_itme{
+        h2{
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        .comp-logos {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            opacity: .7;
+            background-color: unset;
+        }
+        .summa{
+            color: $Col_666;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            margin-top: 8px;
+        }
+        a.car__btn {
+            border: 1px solid $Col_ddd;
+            display: inline-block;
+            font-size: 16px;
+            height: 40px;
+            line-height: 37px;
+            padding: 0 30px;
+            text-transform: capitalize;
+            transition: 0.4s;
+            cursor: pointer;
+            transition: all 400ms;
+            width: inherit;
+        }
+        a.car__btn:hover{ background-color: $Col_design; color: $Col_fff; border-color: $Col_ddd;}
+    }
+    .v-carzin{ display: none; }
+    
+    @media (max-width: 576px){
+        .view_img, a{
+            width: 100%;
+        }
+        .information_itme {
+            width: 100%;
+            margin: 5px 15px;
+            .comp-logos{top:-15px}
+        }
+    }
+}

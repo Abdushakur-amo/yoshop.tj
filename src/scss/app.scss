@@ -1,0 +1,114 @@
+@import './_colors.scss';
+.modal-window {
+    background: $Col_op_1;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 400ms;
+}
+.modal-view {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform: scale(2.5);
+    border-radius: 5px;
+    opacity: 0;
+    transition: all 400ms;
+    
+}
+span.close__modal__window {
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    background: $Col_fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-window .container {
+    max-width: 900px;
+}
+.form-control:focus {
+    border-color: #ffc10747;
+    box-shadow: 0 0 0 0.25rem #ffc10747;
+}
+.showMax992 { display: none; }
+@media (max-width: 992.98px) {
+    .showMax992 { display: block; }
+}
+
+// Action
+.active-modal .modal-view{
+    opacity: 1;
+    transform: scale(1);
+}
+.modal-window.active-modal {
+    opacity: 1;
+    z-index: 1000;
+}
+.mr-5{
+    margin-right: 5px;
+}
+.swal-overlay {background-color: $Col_op_1 !important;}
+/* Loading... */
+.box-load-ajax {
+    background: $Col_op_1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    opacity: 0;
+    transition: all 500ms;
+}
+.load-active{
+	z-index: 1001;
+	opacity: 1;
+}
+.ajax-load {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	display: inline-block;
+	border-top: 4px solid #FFF;
+	border-right: 4px solid transparent;
+	animation: rotation 1s linear infinite;
+}
+
+.ajax-load:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	border-bottom: 4px solid $Col_design;
+	border-left: 4px solid transparent;
+}
+/* keyFrames */
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}

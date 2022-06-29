@@ -1,0 +1,111 @@
+@import './_colors.scss';
+section#slider .carousel {
+    height: 100vh;
+    width: 100%;
+    background-color: $Col_ddd;
+}
+.carousel-indicators button {
+    background-color: $Col_000 !important;
+}
+div.carousel-item {
+    overflow: hidden;
+    height: 100vh;
+}
+div.carousel-caption {
+    bottom: 40%;
+    display: flex;
+    left: unset;  
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    text-align: end;
+    *{
+        width: 100%;
+    }
+}
+.carousel-control-next, .carousel-control-prev {
+    width: 5% !important;
+    top: unset !important;
+    bottom: 10% !important;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    background-size: 60%;
+}
+
+.carousel-control-prev {
+    right: 8% !important;
+    left: unset !important;
+}
+.carousel-control-next {
+    right: 5% !important;
+}
+
+.carousel-item.active {
+    .carousel-caption {
+        transform: translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
+.carousel-caption {
+    transition: all  0.90s ;
+    transform: translate3d(0px, 150px, 0px);
+    opacity: 0;
+    hr{
+        width: 10%;
+        background: $Col_design;
+        opacity: 1;
+    }
+}
+.carousel-dark .carousel-control-next-icon, .carousel-dark .carousel-control-prev-icon {
+    background-size: 60%;
+}
+.carousel-indicators{
+    margin-bottom: 3rem;
+}
+.carousel-indicators [data-bs-target] {
+    width: 10px !important;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.90s ;
+}
+.carousel-indicators .active {
+    width: 30px !important;
+    background-color: $Col_design !important;
+}
+.info__cont_slider{
+    width: 80%;
+    h1{
+        text-align: end;
+    }
+    p{
+        text-align: end;
+    }
+}
+
+
+/*// Экстрамалые девайсы («телефоны», < 576px)*/
+@media (max-width: 575.98px) {
+
+}
+
+/*// Малые девайсы («ландшафтные», < 768px)*/
+@media (max-width: 767.98px) {
+
+
+}
+
+/*// Средние девайсы («таблетки», < 992px) */
+@media (max-width: 991.98px) {
+
+
+}
+
+/*// Большие девайсы (большие десктопы, < 1200px)*/
+@media (max-width: 1199.98px) {
+    .page-container .page-header.no-gutters{ padding-top: 10px !important;}
+}
+
+
+@media (min-width: 991.98px) {
+
+	
+}	
+	

@@ -1,0 +1,9 @@
+@import './_colors.scss';
+
+table thead tr th{
+    padding: 15px 10px !important;
+    background-color: $Col_ddd !important;
+}
+.table-bordered>:not(caption)>* {
+    border: solid 2px $Col_ddd !important;
+}

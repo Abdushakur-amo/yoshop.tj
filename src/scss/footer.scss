@@ -1,0 +1,183 @@
+@import './_colors.scss';
+/*-----------------------------
+	Footer Default
+------------------------------*/
+footer{
+    background: linear-gradient(180deg, #212529 0%, #000000 100%);
+    color: $Col_ddd;
+    .container{
+        padding: 0;
+        .d-flex{
+            justify-content: space-between;
+            flex-wrap: wrap;
+            h4{
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 21px;
+                letter-spacing: 0.05em;
+            }
+            .box1, .box2, .box3{
+                flex: 1;
+                min-width: 260px;
+            }
+            .box4{
+                flex: 3;
+                min-width: 320px;
+            }
+            .box1{
+                ul {
+                    li{
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: 20px;
+                    }
+                    li.set{
+                        div{
+                            padding: 0;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
+                        img{
+                            width: 30px;
+                            background-color: $Col_666;
+                            padding: 5px;
+                            border-radius: 50px;
+                        } 
+                        a{
+                            transition: opacity 500ms;
+                        }
+                        a:hover{
+                            opacity: .5;
+                        }
+                    }
+                }
+            }
+            .box2, .box3{
+                ul{
+                    padding-left: 20px;
+                }
+                li{
+                    list-style:outside;
+                    transition:all 500ms ;
+                }
+                li:hover{
+                    color: $Col_design;
+                    cursor: pointer;
+                    transform: translateX(10px);
+                }
+            }
+            .chld-d-f-flex{
+                // background-color: $Col_error;
+                padding: 2em;
+            }
+            .box4{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                h4{
+                    text-align: center;
+                }
+                .div-input{
+                    width: 100%;
+                    // background-color: aqua;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 2em 0;
+                    div.send-input{
+                        padding: 0;
+                        background: $Col_ddd;
+                        border: 1px solid $Col_design;
+                        width: 80%;
+                        height: 40px;
+                        position: relative;
+                        display: flex;
+                        input{
+                            width: 80%;
+                            border: none;
+                            font-weight: 600;
+                            padding: 0 10px;
+                        }
+                        input:focus{
+                            outline: none;
+                        }
+                        button{
+                            border: none;
+                            background-color: $Col_design;
+                            width: 20%;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            i{
+                                font-size: 1.5em;
+                            }
+                        }
+                        button:hover{ opacity: .9;}
+                    }
+                }
+                
+                div.img-logo{
+                    padding: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    p{
+                        max-width: 250px;
+                        text-align: start;
+                        margin-right: 10px;
+                    }
+                    img{
+                        // background-color: $Col_op_99;
+                        padding: 0 30px;
+                    }
+                }
+            }
+        }
+    }
+    .footer_button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: solid 1px $Col_666;
+        p{
+            
+            text-transform: uppercase;
+            padding: 20px 0;
+            margin: 0;
+        }
+    }
+}
+
+/*// Экстрамалые девайсы («телефоны», < 576px)*/
+@media (max-width: 575.98px) {
+    footer{
+        padding-bottom: 70px;
+        .chld-d-f-flex{
+            padding: 1em !important;
+        }
+        div.img-logo{
+            p{
+                text-align: center !important;
+                margin: 0 !important;
+            }
+        }
+    }
+}
+/*// Экстрамалые девайсы («телефоны», < 576px)*/
+@media (max-width: 992.98px) {
+    footer{
+        .div-input {
+            div.send-input{
+                width: 100% !important;
+            }
+        }
+        .container .d-flex {
+            flex-wrap: wrap-reverse;
+        }
+    }
+    
+}

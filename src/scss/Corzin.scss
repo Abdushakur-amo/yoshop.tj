@@ -1,0 +1,137 @@
+@import './_colors.scss';
+.content-corzin{
+    text-align: center;
+    margin: 50px 0;
+    padding: 20px 20px;
+    .corzin_product{
+        display: none;
+        .table>:not(:first-child) {
+            border-top: 0px solid currentColor;
+        }
+        .header-table-carzin{
+            background-color: $Col_ddd;
+            color: $Col_000;
+            text-transform: uppercase;
+            th{
+                padding: 1rem ;
+            }
+        }
+        tbody{
+            td:not(.product-in-car){
+                text-align: center;
+                padding-top: 4em;
+            }
+        }
+    }
+    table{
+       overflow:scroll ;
+    }
+
+}
+.corzin_null{
+    .content-icon{
+        i{
+            font-size: 4em;
+        }
+    }
+}
+.carzin_mobile{
+    display: none;
+}
+.btn-block{
+    button{
+        margin:15px  5px;
+    }
+}
+.block_cats_uslug{
+    margin: 15px 0;
+    .container {
+        .d-flex{
+            display: flex!important;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            row-gap: 0.5em;
+            column-gap: 0.5em;
+            .box{
+                // border: solid 1px ;
+                box-shadow: 0 0 3px $Col_op_2;
+                width: 100px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: space-around;
+                justify-content: center;
+                transition: all 500ms;
+                p{
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-weight: 700;
+                    font-size: 0.8em;
+                    margin: 5px 0;
+                }
+            }
+            .box:hover{
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+        }
+    }
+}
+@media (max-width: 576px){
+    .corzin_product{
+        display: none;
+    }
+    .carzin_mobile{
+        display: none;
+        .product-in-car{
+            border-bottom: dotted 2px $Col_ddd;
+            padding: 10px 0;
+            ul{
+                text-align: start;
+            }
+        }
+        p.itog{
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        p{
+            margin: 5px;
+            font-weight: bold;
+        }
+        .btn-block{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            
+        }
+    }
+}
+
+.icons_block {
+    margin: 15px 0;
+    .d-flex {
+        justify-content: center;
+        align-items: center;
+    }
+    .box {
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button{
+            font-size: 12px;
+            padding: 0 15px;
+            
+        }
+    }
+}
+
+
+
+
+@media  ( min-width: 575px) and ( max-width: 2600px){
+    .icons_block .box button{
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+    .icons_block .box{ width: inherit; margin-left: 10px; }
+}

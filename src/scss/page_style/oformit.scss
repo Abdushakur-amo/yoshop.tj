@@ -1,0 +1,24 @@
+@import '../colors.scss';
+.box_oformlen {
+    .box_of{
+        width: 500px; 
+    }
+}
+.dos-block-show{
+    height: 0px;
+    overflow: hidden;
+    transition: all .90s;
+    opacity: 0;
+    transform: scaleY(0);
+}
+.dos-action{
+    height: 10em;
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+@media (max-width: 576px){
+    .box_oformlen .box_of{
+        width: 100%;
+    }
+}
